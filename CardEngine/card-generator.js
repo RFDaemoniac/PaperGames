@@ -19,7 +19,7 @@ function mode(data_root, {kind, name, image, stats = null, rules}) {
 		span({ class: 'name' }, name),
 		img({ class: 'image', src: data_root + image }),
 		div({ class: 'rules' }, rules),
-		span({ class: 'kind' }, kind),
+		span({ class: ['kind', kind] }, kind),
 	);
 
 	if (stats != null) {

@@ -1,0 +1,77 @@
+
+
+starting the game:
+all cards are shuffled and put into a single pile in the center
+each player draws two cards
+the players who goes first starts with 20 life, the other player with 25
+
+
+on your turn, you may take one of the following actions:
+play a card
+draw a card
+attack
+
+these actions may be modified by the abilities of cards in play
+
+card types:
+each card has two modes
+when playing a card, pick which mode you are using
+spells have an immediate effect, and are then placed in the discard pile
+
+card positions:
+aura and soma cards are played in fixed positions
+there are four slots, with each slot having space for one aura and one soma
+
+
+combat:
+attacking player chooses up to two monsters to attack with
+defending player chooses to defend up to one attacking monster with up to two of their own monsters
+damage is dealt by each monster equal to its attack
+if a monster is not defened, its damage is dealt to the opponent
+monsters dealt total damage greater than their defense are destroyed
+
+
+
+keywords:
+trap
+	this is played face down, then turned face up at any time to initiate their trap effect
+once
+	after using this ability, destroy this card
+twice
+	after using this ability for the second time, destroy this card
+destroy
+	move a card from in play to the discard pile
+
+
+
+
+
+monster
+construct
+matter
+
+aura
+spell
+form
+
+soma - greek body
+hyle - greek matter / wood
+
+entity
+
+body
+
+thing
+robot
+minion
+summon
+spawn
+pysical
+
+form
+material
+solid
+
+
+
+
