@@ -1,0 +1,116 @@
+
+:root {
+	--orange: rgb(235, 175, 35);
+	--dark-red: rgb(74, 5, 20) ;
+	--dark-brown: rgb(41, 22, 6);
+	--dim-green: rgb(35, 59, 9);
+	--light-grey: rgb(230,230,230);
+}
+* {
+	box-sizing: border-box;
+}
+
+.card-wrapper {
+	background-color: var(--orange);
+	width: fit-content;
+	border-radius: 2rem;
+}
+
+.card {
+	background-color: var(--light-grey);
+	width: 20rem;
+	height: 15.25rem;
+	box-sizing: border-box;
+	border-radius: 1.5rem;
+	position: relative;
+	font-family: Roboto;
+	margin-bottom: -0.5rem;
+	padding: 0.5rem;
+}
+
+.card::after {
+	content: " ";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	box-sizing: border-box;
+	border: 0.5rem solid var(--orange);
+	border-radius: 1.5rem;
+	z-index: 10;
+}
+
+.card.bottom {
+	transform: rotate(180deg);
+}
+
+.card .name {
+	display: block;
+	text-align: center;
+	padding: 0 0.5rem 0.5rem 0.5rem;
+	background-color: var(--orange);
+	border-radius: 0.75rem 0.75rem 0 0;
+}
+
+.card .kind {
+	position: absolute;
+	background-color: blue;
+	width: 5rem;
+	box-sizing: border-box;
+	text-align: center;
+	padding: 0.5rem;
+	top: 0.5rem;
+	left: 0.5rem;
+	color: white;
+	border-radius: 1rem 0 1rem 0 ;
+	z-index: 1;
+	border-bottom: 0.2rem solid var(--orange);
+	border-right: 0.2rem solid var(--orange);
+}
+
+
+.card .stats {
+	position: absolute;
+	top: 0.5rem;
+	right: 0.5rem;
+	padding: 0.5rem;
+	border-radius: 0 1rem 0 1rem;
+	width: 5rem;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	color: white;
+	background-image: linear-gradient(110deg, var(--dark-red) 48%, var(--dim-green) 48%);
+	z-index: 1;
+	border-bottom: 0.2rem solid var(--orange);
+	border-left: 0.2rem solid var(--orange);
+}
+
+.card .rules {
+	margin: 0.5rem;
+}
+
+.card .image {
+	width: 100%;
+	height: 45%;
+	/*position: absolute;
+	top: 2rem;
+	*/
+	object-fit: cover;
+	object-position: 50% 5%;
+	border-bottom: 0.25rem solid var(--orange);
+}
+
+
+.card .rules .trigger > * {
+	display: block;
+}
+
+.card .rules .trigger .cause {
+	font-size: 0.8rem;
+}
+
+.keyword {
+	font-weight: bold;
+}
