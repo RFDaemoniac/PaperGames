@@ -14,7 +14,7 @@ let cards_data = {
 		image : 'images/demon_wisp.jpg',
 		stats: [2,1],
 		rules : trigger(['when this is destroyed'],
-			['deal 2 damage to any monster']),
+			['deal 2 damage to any monster or opponent']),
 	},
 	prepared_counter : {
 		kind: 'aura',
@@ -42,14 +42,14 @@ let cards_data = {
 		kind: 'aura',
 		name: 'Mind Palace',
 		image: 'images/mind_palace.jpg',
-		rules: trigger('modify draw action', 'draw an additional card, then discard a card'),
+		rules: trigger('modify draw action', 'draw an exta card, then discard a card'),
 	},
 	aggressive_tactics : {
 		kind: 'aura',
 		name: 'Aggressive Tactics',
 		image: 'images/aggressive_tactics.jpg',
 		rules: [
-			trigger('modify attack action', 'you may attack with an additional monster'),
+			trigger('modify attack action', 'you may attack with an extra monster'),
 		],
 	},
 	empty_the_armory : {
@@ -66,6 +66,37 @@ let cards_data = {
 		image: 'images/seeing_stone.jpg',
 		rules: "look at opponent's hand, they discard a card of your choice",
 	},
+	blunting_rampager : {
+		kind: 'monster',
+		name: 'Blunting Rampager',
+		image: 'images/blunting_rampager.jpg',
+		stats: [1, 3],
+		rules: trigger('when this monster damages opponent',
+			"opponent's next action cannot be draw, unless they have no cards in hand")
+	},
+	furious_rummaging : {
+		kind: 'aura',
+		name: 'Furious Rummaging',
+		image: 'images/furious_rummaging.jpg',
+		rules: [
+			trigger('play cost', 'discard a card'),
+			trigger('modify draw action', 'if your hand is empty, draw an extra card'),
+		],
+	},
+	false_god : {
+		kind: 'monster',
+		name: 'False God',
+		image: 'images/false_god.jpg',
+		stats: [5, 6],
+		rules: trigger('play cost', 'sacrifice a monster'),
+	},
+	spirit_of_vengeance : {
+		kind: 'monster',
+		name: 'Spirit of Vengeance',
+		image: 'images/spirit_of_vengeance.jpg',
+		stats: [1, 2],
+		rules: trigger('when you sacrifice a card', 'deal 1 damage to any monster or opponent'),
+	},
 }
 
 let card_mode_pairs = [
@@ -73,6 +104,7 @@ let card_mode_pairs = [
 	['mind_palace', 'chain_lightning'],
 	['demon_wisp', 'prepared_counter'],
 	['seeing_stone', 'aggressive_tactics'],
+	['saving_grace', 'blunting_rampager'],
 
 ]
 
